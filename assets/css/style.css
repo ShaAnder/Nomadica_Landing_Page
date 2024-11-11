@@ -14,6 +14,10 @@ body {
   background-color: black;
 }
 
+.align-right {
+  text-align: right;
+}
+
 .hero {
   display: flex;
   justify-content: center;
@@ -36,4 +40,8 @@ body {
   text-shadow: 3px 3px 3px black;
   background-color: transparent;
   opacity: 1;
+}
+
+.signup-cta span {
+  margin-left: 1rem;
 }
