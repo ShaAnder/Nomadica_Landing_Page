@@ -1,2 +1,3 @@
-# bootstrap_example
-Sample responsive website using bootstrap
+# Bootstrap exmple page
+
+This is an example page to showcase basic bootstrap in action. It's a basic landing page for a game application.
