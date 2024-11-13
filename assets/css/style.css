@@ -11,37 +11,145 @@
 }
 
 body {
+  font-family: Exo;
   background-color: black;
+}
+
+/* NAVBAR */
+
+.navbar-main {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Semi-transparent black for the navbar */
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px); /* Adds a frosted glass effect */
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.6);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 0 5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #6cb762; /* Highlight color on hover */
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 130%;
+  height: auto;
+}
+
+.container {
+  margin: auto;
+  margin-top: 3rem;
 }
 
 .align-right {
   text-align: right;
 }
 
+/* HERO IMAGE */
+
 .hero {
-  display: flex;
-  justify-content: center;
-  opacity: 0.8;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-.hero img {
-  padding: 0rem;
-  margin: auto;
+.hero-image {
   width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .hero h1 {
+  display: flex;
   color: white;
   position: absolute;
-  font-size: 12rem;
+  font-size: 10rem;
   top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: var(--font-2);
-  letter-spacing: 3rem;
-  text-shadow: 3px 3px 3px black;
+  letter-spacing: 0.5rem;
+  text-shadow: 3px 2px 1px black;
   background-color: transparent;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
-.signup-cta span {
-  margin-left: 1rem;
+.callout-section {
+  margin: 2rem 2rem;
+  background: linear-gradient(to bottom, #129af0, rgba(0, 0, 0, 0));
+  height: 1000px;
+  margin: 0;
+}
+
+.callout-h1 {
+  font-weight: 700;
+  font-size: 3.4rem;
+  color: white;
+  padding: 1.7rem 3rem;
+}
+
+.callout-h3 {
+  font-weight: 200;
+  color: white;
+  padding: 1.7rem 3rem;
+}
+
+.callout p {
+  color: white;
+  font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .navbar-main {
+    display: none;
+  }
+
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-image {
+    width: 100vw; /* Ensures it fills the viewport width */
+    height: 100vh; /* Ensures it fills the viewport height */
+    object-fit: cover; /* Scales image to fill the container, cropping overflow */
+    object-position: center; /* Centers the image */
+  }
 }
