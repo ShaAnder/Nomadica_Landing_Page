@@ -12,75 +12,48 @@
 
 body {
   font-family: Exo;
-  background-color: black;
+  background-color: rgb(2, 2, 2);
 }
 
-/* NAVBAR */
+/* NAVBAR for desktop*/
 
-.navbar-main {
+.navbar {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 15px 30px;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.6
-  ); /* Semi-transparent black for the navbar */
-  top: 0;
+  padding: 20px;
   z-index: 1000;
-  backdrop-filter: blur(10px); /* Adds a frosted glass effect */
-  width: 100%;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.6);
 }
 
-.nav-links {
+.desktop-nav {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-}
-
-.nav-links li {
-  margin: 0 5rem;
+  justify-content: center;
+  width: 100%;
 }
 
 .nav-links a {
-  text-decoration: none;
   color: white;
-  font-size: 1.6rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  transition: color 0.3s;
+  text-decoration: none;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-size: 1.5rem;
 }
 
-.nav-links a:hover {
-  color: #6cb762; /* Highlight color on hover */
+.nav-logo img {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  height: 40px;
 }
 
-.logo {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo img {
-  width: 130%;
-  height: auto;
-}
-
-.container {
-  margin: auto;
-  margin-top: 3rem;
-}
-
-.align-right {
-  text-align: right;
+.mobile-nav,
+.dropdown-menu,
+.purchase-menu {
+  display: none;
 }
 
 /* HERO IMAGE */
@@ -175,6 +148,67 @@ body {
 }
 
 @media (max-width: 768px) {
+  .nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .nav-button {
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .nav-button:hover .dropdown {
+    display: block;
+  }
+
+  #menu-button .dropdown {
+    bottom: 50px; /* Opens upwards by default */
+    left: 0;
+  }
+
+  #purchase-button .dropdown {
+    bottom: 50px; /* Opens upwards by default */
+    right: 0;
+  }
+
+  .dropdown a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .dropdown a:hover {
+    background-color: #444;
+  }
+
+  .sticky-top {
+    top: 0;
+    bottom: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
   .hero h1 {
     font-size: 6rem;
     top: 20%;
@@ -219,5 +253,25 @@ body {
     position: relative;
     right: 132%;
     overflow: hidden;
+  }
+
+  #reviews {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: white;
+  }
+
+  #reviews .review {
+    padding-bottom: 1rem;
+  }
+
+  #reviews .review h3 {
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  #reviews .review p {
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
   }
 }

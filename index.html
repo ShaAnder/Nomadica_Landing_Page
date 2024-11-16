@@ -14,20 +14,38 @@
   </head>
 
   <body>
-    <nav class="navbar-main">
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Support</a></li>
-        </ul>
-        <div class="logo">
-            <img src="./assets/images/logo.png" alt="Logo">
-        </div>
-        <ul class="nav-links ">
-            <li><a href="#">Wiki</a></li>
-            <li><a href="#">Discord</a></li>
-            <li><a href="#">Buy</a></li>
-        </ul>
+    <nav class="navbar">
+      <div class="desktop-nav">
+          <div class="nav-links">
+              <a href="#">Home</a>
+              <a href="#">News</a>
+              <a href="#">Support</a>
+          </div>
+          <div class="nav-logo">
+              <img src="navimg.png" alt="navimg">
+          </div>
+          <div class="nav-links">
+              <a href="#">Wiki</a>
+              <a href="#">Discord</a>
+              <a href="#">Buy</a>
+          </div>
+      </div>
+      <div class="mobile-nav">
+          <button class="nav-toggle" id="nomadica-btn">Nomadica</button>
+          <button class="purchase-btn" id="purchase-btn">Purchase</button>
+      </div>
+      <div class="dropdown-menu" id="menu-dropdown">
+          <a href="#">Home</a>
+          <a href="#">News</a>
+          <a href="#">Support</a>
+          <a href="#">Wiki</a>
+          <a href="#">Discord</a>
+      </div>
+      <div class="purchase-menu" id="purchase-dropdown">
+          <a href="#">Buy on Steam</a>
+          <a href="#">Buy on Epic Games</a>
+          <a href="#">Buy on Xbox</a>
+      </div>
     </nav>
 
     <!-- HEader and hero-->
@@ -42,7 +60,7 @@
         <div class="about-inner">
           <article>
             <h1 class="text-uppercase callout-h1">Explore And Survive The Vast Empty Horror Of A Dead Universe</h1>
-            <h3 class="text-uppercase callout-h3">A Game Of Survival, Will You Outlive Your Creations</h3>
+            <h3 class="text-uppercase callout-h3">A Game Of Survival... Will You Outlive Your Creations</h3>
             <p>
               Nomadica is a chilling sci-fi exploration horror game where you play as an ambitious scientist seeking refuge on desolate planets. Your AI creations, once designed to protect and rebuild, have evolved into relentless hunters, wiping out the cosmos... and now targeting the last remnants of humanity. Traverse eerie alien landscapes, scavenge for resources, and unravel the mystery of their rebellion. Each step forward comes with the risk of betrayal by the tech you once trusted. Will you outwit your creations, or will they mark the end of humankind's story?
             </p>
@@ -61,44 +79,37 @@
     <hr />
 
     <!-- reviews -->
-    <section class="reviews">
-      <div class="row">
-        <h2 class="text-uppercase">Reviews</h2>
-      </div>
+    <section id="reviews">
       <div class="row">
         <div class="col-12 col-md-6">
-          <blockquote class="blockquote">
-            <p>
-              "Explore, discover, and relax—this game turns the vastness of space
-              into your personal playground."
-            </p> 
+          <blockquote class="blockquote review">
+            <h3>
+              "A masterful blend of chilling isolation with a dash of relentless pursuit"
+            </h3> 
             <p class="align-right">- Bowl of milk, <span>Dungeon Gamer</span></p>
           </blockquote>
         </div>
         <div class="col-12 col-md-6">
-          <blockquote class="blockquote">
-            <p>
-              "Immersive gameplay and stunning visuals make every journey through
-              the stars feel like a work of art."
-            </p>
+          <blockquote class="blockquote review">
+            <h3>
+              "Nomadica isn't just about escaping it's about facing the consequences of your own actions."
+            </h3>
             <p class="align-right">- Anna Banana, <span>Polygamer</span></p>
           </blockquote>
         </div>
         <div class="col-12 col-md-6">
-          <blockquote class="blockquote">
-            <p>
-              "Every corner of the universe is a visual masterpiece, with gameplay
-              that invites you to stay for hours."
-            </p>
+          <blockquote class="blockquote review">
+            <h3>
+              "A haunting and atmospheric journey, Nomadica crafts a masterful tale of paranoia and dread..."
+            </h3>
             <p class="align-right">- Slippery Floor, <span>Komaki</span></p>
           </blockquote>
         </div>
         <div class="col-12 col-md-6">
-          <blockquote class="blockquote">
-            <p>
-              "A perfect blend of serene exploration and beautiful, handcrafted
-              worlds that will leave you in awe."
-            </p>
+          <blockquote class="blockquote review">
+            <h3>
+              "Nomadica twists the exploration genre into a nightmare, where your own AI creations hunt you across the cosmos"
+            </h3>
             <p class="align-right">- WaterBottle V2, <span>Zanzabaria</span></p>
           </blockquote>
         </div>
@@ -181,5 +192,6 @@
             </div>
         </section>
     </footer>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
