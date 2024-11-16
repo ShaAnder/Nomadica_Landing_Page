@@ -112,9 +112,17 @@ body {
   opacity: 1 !important;
 }
 
-.callout-section {
-  height: 900px;
-  z-index: 1;
+.about-content {
+  position: absolute;
+  padding: 4rem 0;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    #000000 6rem,
+    rgba(18, 154, 240, 0) 100%
+  );
 }
 
 .callout-h1 {
@@ -122,27 +130,27 @@ body {
   font-size: 3.4rem;
   color: white;
   padding: 1.7rem 0rem 1.5rem 3rem;
+  z-index: 99;
 }
 
 .callout-h3 {
   font-weight: 200;
   color: white;
   padding: 0rem 0rem 1.5rem 3rem;
+  z-index: 99;
 }
 
-.callout-section p {
+#about p {
   color: white;
   font-size: 1rem;
   padding: 0rem 3rem 1.5rem 3rem;
+  z-index: 99;
 }
 
 .landing-image {
-  position: absolute;
-  width: 100%;
-}
-
-.reviews {
-  display: none;
+  width: 1920px;
+  height: 800px;
+  object-fit: cover;
 }
 
 .features {
@@ -177,29 +185,39 @@ body {
 
 @media (max-width: 420px) {
   .hero h1 {
-    font-size: 3rem;
-    top: 20%;
+    font-size: 3.5rem;
+    top: 25%;
     left: 50%;
     z-index: 1;
   }
 
   .hero img {
-    transform: scale(1.5);
+    transform: scale(1.2);
     float: left;
-    margin-left: 6rem;
+  }
+
+  .spacer-image {
+    width: 0;
   }
 
   .callout-h1 {
     font-size: 2.5rem;
-    padding: 1.5rem 1.2rem 1rem 1.2rem;
+    padding: 0rem 2rem 1rem 2rem;
   }
 
   .callout-h3 {
-    font-size: 1.5rem;
-    padding: 0.3rem 1.2rem 1rem 1.2rem;
+    font-size: 2rem;
+    padding: 0.3rem 2rem 1rem 2rem;
   }
 
-  .callout-section p {
-    padding: 0.1rem 1.2rem 1rem 1.2rem;
+  #about p {
+    padding: 0.1rem 2rem 1rem 2rem;
+    text-shadow: 2px 3px 2px black;
+  }
+
+  .landing-image {
+    position: relative;
+    right: 132%;
+    overflow: hidden;
   }
 }
