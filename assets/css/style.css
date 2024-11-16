@@ -18,30 +18,33 @@ body {
 /* NAVBAR for desktop*/
 
 .navbar {
-  position: absolute;
+  position: absolute; /* position absolutely so it won't follow*/
   top: 0;
   left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   padding: 20px;
-  z-index: 1000;
+  z-index: 1000; /* keep navbar on top */
 }
 
 .desktop-nav {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* center nav links */
   width: 100%;
 }
 
 .nav-links a {
   color: white;
-  text-decoration: none;
   margin-left: 3rem;
+  text-decoration: none;
   margin-right: 3rem;
   font-size: 1.5rem;
+  transition: ease 0.6s;
+}
+
+.nav-links a:hover {
+  color: rgb(255, 150, 13);
 }
 
 .nav-logo img {
