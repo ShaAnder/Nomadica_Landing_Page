@@ -113,28 +113,40 @@ body {
 }
 
 .callout-section {
-  margin: 2rem 2rem;
-  background: linear-gradient(to bottom, #129af0, rgba(0, 0, 0, 0));
-  height: 1000px;
-  margin: 0;
+  height: 900px;
+  z-index: 1;
 }
 
 .callout-h1 {
   font-weight: 700;
   font-size: 3.4rem;
   color: white;
-  padding: 1.7rem 3rem;
+  padding: 1.7rem 0rem 1.5rem 3rem;
 }
 
 .callout-h3 {
   font-weight: 200;
   color: white;
-  padding: 1.7rem 3rem;
+  padding: 0rem 0rem 1.5rem 3rem;
 }
 
-.callout p {
+.callout-section p {
   color: white;
   font-size: 1rem;
+  padding: 0rem 3rem 1.5rem 3rem;
+}
+
+.landing-image {
+  position: absolute;
+  width: 100%;
+}
+
+.reviews {
+  display: none;
+}
+
+.features {
+  display: none;
 }
 
 @media (max-width: 1024px) {
@@ -151,5 +163,43 @@ body {
     height: 100vh; /* Ensures it fills the viewport height */
     object-fit: cover; /* Scales image to fill the container, cropping overflow */
     object-position: center; /* Centers the image */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 6rem;
+    top: 20%;
+    left: 50%;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 3rem;
+    top: 20%;
+    left: 50%;
+    z-index: 1;
+  }
+
+  .hero img {
+    transform: scale(1.5);
+    float: left;
+    margin-left: 6rem;
+  }
+
+  .callout-h1 {
+    font-size: 2.5rem;
+    padding: 1.5rem 1.2rem 1rem 1.2rem;
+  }
+
+  .callout-h3 {
+    font-size: 1.5rem;
+    padding: 0.3rem 1.2rem 1rem 1.2rem;
+  }
+
+  .callout-section p {
+    padding: 0.1rem 1.2rem 1rem 1.2rem;
   }
 }
