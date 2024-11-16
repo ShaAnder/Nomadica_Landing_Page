@@ -1,29 +1,29 @@
-const navBar = document.getElementById("nav-bar");
-const menuButton = document.getElementById("menu-button");
-const purchaseButton = document.getElementById("purchase-button");
-const menuDropdown = document.getElementById("menu-dropdown");
-const purchaseDropdown = document.getElementById("purchase-dropdown");
+document.addEventListener("DOMContentLoaded", () => {
+  const nomadicaBtn = document.getElementById("nomadica-btn");
+  const purchaseBtn = document.getElementById("purchase-btn");
+  const menuDropdown = document.getElementById("menu-dropdown");
+  const purchaseDropdown = document.getElementById("purchase-dropdown");
+  const navbar = document.querySelector(".navbar");
 
-// Handle dropdown toggle
-menuButton.addEventListener("click", () => {
-  menuDropdown.style.display =
-    menuDropdown.style.display === "block" ? "none" : "block";
-  purchaseDropdown.style.display = "none";
-});
+  // Toggle dropdown menus
+  nomadicaBtn.addEventListener("click", () => {
+    menuDropdown.style.display =
+      menuDropdown.style.display === "block" ? "none" : "block";
+    purchaseDropdown.style.display = "none"; // Close other menu
+  });
 
-purchaseButton.addEventListener("click", () => {
-  purchaseDropdown.style.display =
-    purchaseDropdown.style.display === "block" ? "none" : "block";
-  menuDropdown.style.display = "none";
-});
+  purchaseBtn.addEventListener("click", () => {
+    purchaseDropdown.style.display =
+      purchaseDropdown.style.display === "block" ? "none" : "block";
+    menuDropdown.style.display = "none"; // Close other menu
+  });
 
-// Sticky nav bar toggle
-window.addEventListener("scroll", () => {
-  if (window.scrollY > window.innerHeight) {
-    navBar.classList.add("sticky-top");
-    navBar.classList.remove("nav-bar");
-  } else {
-    navBar.classList.remove("sticky-top");
-    navBar.classList.add("nav-bar");
-  }
+  // Scroll behavior
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > window.innerHeight) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
 });

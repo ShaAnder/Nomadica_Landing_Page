@@ -18,17 +18,21 @@ body {
 /* NAVBAR for desktop*/
 
 .navbar {
-  position: absolute; /* position absolutely so it won't follow*/
-  top: 0;
-  left: 0;
+  padding: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  padding: 20px;
   z-index: 1000; /* keep navbar on top */
 }
 
 .desktop-nav {
+  position: fixed; /* position absolutely so it won't follow*/
+  top: 0;
+  left: 0;
+  height: 70px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center; /* center nav links */
   width: 100%;
@@ -40,7 +44,8 @@ body {
   text-decoration: none;
   margin-right: 3rem;
   font-size: 1.5rem;
-  transition: ease 0.6s;
+  line-height: 1.5rem;
+  transition: ease 0.4s;
 }
 
 .nav-links a:hover {
@@ -53,10 +58,59 @@ body {
   height: 40px;
 }
 
-.mobile-nav,
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  justify-content: space-evenly;
+
+  z-index: 1000;
+}
+.mobile-nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
 .dropdown-menu,
 .purchase-menu {
   display: none;
+  position: fixed;
+  height: auto;
+  top: 72.4%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  text-align: right;
+  transition: ease-in(0.3s);
+  margin: 0;
+  border: none;
+}
+
+.dropdown-menu {
+  text-align: left;
+}
+
+.dropdown-menu a,
+.purchase-menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+/* Scroll Behavior */
+.navbar.scrolled {
+  position: fixed;
+  top: 0;
+  bottom: unset;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 /* HERO IMAGE */
@@ -116,6 +170,10 @@ body {
   z-index: 99;
 }
 
+#about {
+  overflow: hidden;
+}
+
 #about p {
   color: white;
   font-size: 1rem;
@@ -124,9 +182,9 @@ body {
 }
 
 .landing-image {
-  width: 1920px;
   height: 800px;
   object-fit: cover;
+  overflow: hidden;
 }
 
 .features {
@@ -134,8 +192,12 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .navbar-main {
+  .desktop-nav {
     display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
   }
 
   .hero {
@@ -151,72 +213,18 @@ body {
 }
 
 @media (max-width: 768px) {
-  .nav-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    background-color: #222;
-    padding: 10px 20px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-  }
-
-  .nav-button {
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    position: relative;
-  }
-
-  .dropdown {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    color: #fff;
-    width: 150px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-  }
-
-  .nav-button:hover .dropdown {
-    display: block;
-  }
-
-  #menu-button .dropdown {
-    bottom: 50px; /* Opens upwards by default */
-    left: 0;
-  }
-
-  #purchase-button .dropdown {
-    bottom: 50px; /* Opens upwards by default */
-    right: 0;
-  }
-
-  .dropdown a {
-    display: block;
-    padding: 10px;
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .dropdown a:hover {
-    background-color: #444;
-  }
-
-  .sticky-top {
-    top: 0;
-    bottom: auto;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  }
-
   .hero h1 {
     font-size: 6rem;
     top: 20%;
     left: 50%;
     z-index: 1;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
   }
 }
 
