@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     menuDropdown.style.display =
       menuDropdown.style.display === "block" ? "none" : "block";
     purchaseDropdown.style.display = "none"; // Close other menu
+    nomadicaBtn.style.color = "white";
+    purchaseBtn.style.color = "white";
   });
 
   purchaseBtn.addEventListener("click", () => {
@@ -22,8 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     if (window.scrollY > window.innerHeight) {
       navbar.classList.add("scrolled");
+      menuDropdown.classList.add("dropdown-scrolled");
+      purchaseDropdown.classList.add("dropdown-scrolled");
     } else {
       navbar.classList.remove("scrolled");
+      menuDropdown.classList.remove("dropdown-scrolled");
+      purchaseDropdown.classList.remove("dropdown-scrolled");
     }
   });
 });

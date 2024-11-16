@@ -20,8 +20,11 @@ body {
 .navbar {
   padding: 0;
   width: 100%;
-  display: flex;
-  z-index: 1000; /* keep navbar on top */
+  position: fixed;
+  bottom: 0; /* Stick to the bottom initially */
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease; /* Smooth transition */
+  z-index: 1000; /* Ensure it appears above other elements */
 }
 
 .desktop-nav {
@@ -59,19 +62,20 @@ body {
 }
 
 .mobile-nav {
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
   padding: 10px 20px;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   z-index: 1000;
 }
 .mobile-nav button {
+  width: 50%;
   background: none;
   border: none;
+  outline: none;
   color: white;
   font-size: 1.5rem;
 }
@@ -84,16 +88,18 @@ body {
   top: 72.4%;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   padding: 20px;
   text-align: right;
   transition: ease-in(0.3s);
   margin: 0;
   border: none;
+  padding-right: 6.5rem;
 }
 
 .dropdown-menu {
   text-align: left;
+  padding-left: 6.5rem;
 }
 
 .dropdown-menu a,
@@ -103,14 +109,31 @@ body {
   display: block;
   margin: 10px 0;
   font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.dropdown-menu a:hover,
+.purchase-menu a:hover {
+  color: orangered;
 }
 
 /* Scroll Behavior */
 .navbar.scrolled {
-  position: fixed;
-  top: 0;
-  bottom: unset;
-  background: rgba(0, 0, 0, 0.8);
+  bottom: unset; /* Unset bottom positioning */
+  top: 0; /* Stick to the top */
+  background: rgba(0, 0, 0, 0.7); /* Optional: slightly darker */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: shadow for emphasis */
+}
+
+.dropdown-menu.dropdown-scrolled {
+  top: unset;
+  bottom: 72.4%;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.purchase-menu.dropdown-scrolled {
+  top: unset;
+  bottom: 72.4%;
 }
 
 /* HERO IMAGE */
