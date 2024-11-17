@@ -233,6 +233,9 @@ was kept at the correct amounts. */
   display: none;
 }
 
+@media (max-width: 1440px) {
+}
+
 @media (max-width: 1024px) {
   .desktop-nav {
     display: none;
@@ -242,17 +245,22 @@ was kept at the correct amounts. */
     display: flex;
   }
 
+  .mobile-nav button {
+    font-size: 4rem;
+  }
+
   .mobile-nav > button {
-    margin-right: 3.5rem;
+    margin-right: 4rem;
   }
 
   .mobile-nav > button:first-child {
-    margin-left: 3.5rem;
+    margin-left: 4rem;
   }
 
   .dropdown-menu,
   .purchase-menu {
-    top: 60.8%;
+    height: auto;
+    bottom: 116px;
     padding-right: 5rem;
     border-radius: 0;
   }
@@ -263,11 +271,11 @@ was kept at the correct amounts. */
   }
 
   .dropdown-menu a {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   .purchase-menu a {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   /* Scroll Behavior */
@@ -280,17 +288,13 @@ was kept at the correct amounts. */
 
   .dropdown-menu.dropdown-scrolled {
     top: unset;
-    bottom: 65.5%;
+    bottom: 59.6%;
     background: rgba(0, 0, 0, 0.7);
   }
 
   .purchase-menu.dropdown-scrolled {
     top: unset;
-    bottom: 65.5%;
-  }
-
-  .mobile-nav button {
-    font-size: 3rem;
+    bottom: 59.6%;
   }
 
   .nav-links .hero-image {
@@ -309,17 +313,25 @@ was kept at the correct amounts. */
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .dropdown-menu,
   .purchase-menu {
-    top: 65.5%;
-    padding-right: 2.2rem;
+    bottom: 92px;
+    padding-right: 5.1rem;
     border-radius: 0;
   }
 
   .dropdown-menu {
     text-align: left;
-    padding-left: 2.2rem;
+    padding-left: 5.1rem;
+  }
+
+  .dropdown-menu a {
+    font-size: 2.3rem;
+  }
+
+  .purchase-menu a {
+    font-size: 2.3rem;
   }
 
   /* Scroll Behavior */
@@ -332,22 +344,50 @@ was kept at the correct amounts. */
 
   .dropdown-menu.dropdown-scrolled {
     top: unset;
-    bottom: 65.5%;
+    bottom: 55.7%;
     background: rgba(0, 0, 0, 0.7);
   }
 
   .purchase-menu.dropdown-scrolled {
     top: unset;
-    bottom: 65.5%;
+    bottom: 55.7%;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
+  .dropdown-menu a {
+    font-size: 1.8rem;
+  }
+
+  .purchase-menu a {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .mobile-nav > button {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+
+  .mobile-nav > button:first-child {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+
   .dropdown-menu,
   .purchase-menu {
-    top: 63.3%;
+    height: auto;
+    bottom: 68px;
     padding-right: 2.2rem;
     border-radius: 0;
+  }
+
+  .dropdown-menu a {
+    font-size: 1.6rem;
+  }
+  .purchase-menu a {
+    font-size: 1.6rem;
   }
 
   .dropdown-menu {
@@ -364,14 +404,11 @@ was kept at the correct amounts. */
   }
 
   .dropdown-menu.dropdown-scrolled {
-    top: unset;
-    bottom: 63.3%;
-    background: rgba(0, 0, 0, 0.9);
+    top: 68px;
   }
 
   .purchase-menu.dropdown-scrolled {
-    top: unset;
-    bottom: 63.3%;
+    top: 68px;
   }
 
   .spacer-image {
@@ -417,5 +454,39 @@ was kept at the correct amounts. */
   #reviews .review p {
     padding-bottom: 0.5rem;
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .dropdown-menu,
+  .purchase-menu {
+    bottom: 56px;
+    padding-right: 2.2rem;
+    border-radius: 0;
+  }
+
+  .mobile-nav > button {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  .mobile-nav > button:first-child {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  .dropdown-menu a {
+    font-size: 1rem;
+  }
+  .purchase-menu a {
+    font-size: 1rem;
+  }
+
+  .dropdown-menu.dropdown-scrolled {
+    top: 56px;
+  }
+
+  .purchase-menu.dropdown-scrolled {
+    top: 56px;
   }
 }
