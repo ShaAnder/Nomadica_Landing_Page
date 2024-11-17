@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const purchaseBtn = document.getElementById("purchase-btn");
   const menuDropdown = document.getElementById("menu-dropdown");
   const purchaseDropdown = document.getElementById("purchase-dropdown");
-  const navbar = document.querySelector(".navbar");
+  const navbar = document.querySelector(".mobile-nav");
 
   // Toggle dropdown menus
   nomadicaBtn.addEventListener("click", () => {

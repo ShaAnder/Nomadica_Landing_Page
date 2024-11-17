@@ -49,32 +49,13 @@ was kept at the correct amounts. */
   width: 100%;
 }
 
-.nav-links a {
-  color: white;
-  margin-left: 3rem;
-  text-decoration: none;
-  margin-right: 3rem;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  transition: ease 0.4s;
-}
-
-.nav-links a:hover {
-  color: rgb(255, 150, 13);
-}
-
-.nav-logo img {
-  margin-left: 5rem;
-  margin-right: 5rem;
-  height: 40px;
-}
-
 .mobile-nav {
   display: none;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.9);
   padding: 10px 20px;
   justify-content: space-evenly;
   z-index: 1000;
@@ -99,60 +80,24 @@ was kept at the correct amounts. */
   margin-right: 1rem;
 }
 
-.dropdown-menu,
-.purchase-menu {
-  display: none;
-  position: fixed;
-  height: auto;
-  top: 72.4%;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  text-align: right;
-  transition: ease-in(0.3s);
-  margin: 0;
-  border: none;
-  padding-right: 6.5rem;
-}
-
-.dropdown-menu {
-  text-align: left;
-  padding-left: 6.5rem;
-}
-
-.dropdown-menu a,
-.purchase-menu a {
+.nav-links a {
   color: white;
+  margin-left: 3rem;
   text-decoration: none;
-  display: block;
-  margin: 10px 0;
+  margin-right: 3rem;
   font-size: 1.5rem;
-  transition: 0.3s;
+  line-height: 1.5rem;
+  transition: ease 0.4s;
 }
 
-.dropdown-menu a:hover,
-.purchase-menu a:hover {
-  color: orangered;
+.nav-links a:hover {
+  color: rgb(255, 150, 13);
 }
 
-/* Scroll Behavior */
-.navbar.scrolled {
-  bottom: unset; /* Unset bottom positioning */
-  top: 0; /* Stick to the top */
-  background: rgba(0, 0, 0, 0.7); /* Optional: slightly darker */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: shadow for emphasis */
-}
-
-.dropdown-menu.dropdown-scrolled {
-  top: unset;
-  bottom: 72.4%;
-  background: rgba(0, 0, 0, 0.9);
-}
-
-.purchase-menu.dropdown-scrolled {
-  top: unset;
-  bottom: 72.4%;
+.nav-logo img {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  height: 40px;
 }
 
 /* HERO IMAGE */
@@ -233,9 +178,6 @@ was kept at the correct amounts. */
   display: none;
 }
 
-@media (max-width: 1440px) {
-}
-
 @media (max-width: 1024px) {
   .desktop-nav {
     display: none;
@@ -257,44 +199,57 @@ was kept at the correct amounts. */
     margin-left: 4rem;
   }
 
-  .dropdown-menu,
-  .purchase-menu {
-    height: auto;
-    bottom: 116px;
-    padding-right: 5rem;
-    border-radius: 0;
+  .dropdown {
+    display: none;
+    position: fixed;
+    height: 450px;
+    top: 45.1%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    margin: 0;
+    border: none;
+    z-index: 1000;
+    transition: ease-in(0.3s);
   }
 
-  .dropdown-menu {
-    text-align: left;
-    padding-left: 5rem;
-  }
-
-  .dropdown-menu a {
+  .dropdown a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
     font-size: 2.8rem;
+    transition: 0.3s;
   }
 
-  .purchase-menu a {
-    font-size: 2.8rem;
+  .dropdown a:hover {
+    color: orangered;
+  }
+
+  .nomadica a {
+    padding-left: 4rem;
+  }
+
+  .purchase a {
+    text-align: right;
+    padding-right: 4rem;
+  }
+
+  .market-img {
+    width: 50px;
+    align-items: center;
   }
 
   /* Scroll Behavior */
-  .navbar.scrolled {
+  .mobile-nav.scrolled {
     bottom: unset; /* Unset bottom positioning */
     top: 0; /* Stick to the top */
-    background: rgba(0, 0, 0, 0.7); /* Optional: slightly darker */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: shadow for emphasis */
   }
 
-  .dropdown-menu.dropdown-scrolled {
+  .dropdown-scrolled {
     top: unset;
-    bottom: 59.6%;
-    background: rgba(0, 0, 0, 0.7);
-  }
-
-  .purchase-menu.dropdown-scrolled {
-    top: unset;
-    bottom: 59.6%;
+    bottom: 45.1%;
   }
 
   .nav-links .hero-image {
@@ -313,180 +268,75 @@ was kept at the correct amounts. */
   }
 }
 
-@media (max-width: 860px) {
-  .dropdown-menu,
-  .purchase-menu {
-    bottom: 92px;
-    padding-right: 5.1rem;
-    border-radius: 0;
-  }
-
-  .dropdown-menu {
-    text-align: left;
-    padding-left: 5.1rem;
-  }
-
-  .dropdown-menu a {
-    font-size: 2.3rem;
-  }
-
-  .purchase-menu a {
-    font-size: 2.3rem;
-  }
-
-  /* Scroll Behavior */
-  .navbar.scrolled {
-    bottom: unset; /* Unset bottom positioning */
-    top: 0; /* Stick to the top */
-    background: rgba(0, 0, 0, 0.7); /* Optional: slightly darker */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: shadow for emphasis */
-  }
-
-  .dropdown-menu.dropdown-scrolled {
-    top: unset;
-    bottom: 55.7%;
-    background: rgba(0, 0, 0, 0.7);
-  }
-
-  .purchase-menu.dropdown-scrolled {
-    top: unset;
-    bottom: 55.7%;
-  }
-}
-
 @media (max-width: 768px) {
-  .dropdown-menu a {
-    font-size: 1.8rem;
-  }
-
-  .purchase-menu a {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 540px) {
-  .mobile-nav > button {
-    font-size: 2rem;
-    margin-right: 1rem;
-  }
-
-  .mobile-nav > button:first-child {
-    font-size: 2rem;
-    margin-left: 1rem;
-  }
-
-  .dropdown-menu,
-  .purchase-menu {
-    height: auto;
-    bottom: 68px;
-    padding-right: 2.2rem;
-    border-radius: 0;
-  }
-
-  .dropdown-menu a {
-    font-size: 1.6rem;
-  }
-  .purchase-menu a {
-    font-size: 1.6rem;
-  }
-
-  .dropdown-menu {
-    text-align: left;
-    padding-left: 2.2rem;
-  }
-
-  /* Scroll Behavior */
-  .navbar.scrolled {
-    bottom: unset; /* Unset bottom positioning */
-    top: 0; /* Stick to the top */
-    background: rgba(0, 0, 0, 0.7); /* Optional: slightly darker */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: shadow for emphasis */
-  }
-
-  .dropdown-menu.dropdown-scrolled {
-    top: 68px;
-  }
-
-  .purchase-menu.dropdown-scrolled {
-    top: 68px;
-  }
-
-  .spacer-image {
-    width: 0;
-  }
-
-  .callout-h1 {
+  .mobile-nav button {
     font-size: 2.5rem;
-    padding: 0rem 2rem 1rem 2rem;
+  }
+  .dropdown {
+    height: 400px;
+    top: 53.4%;
   }
 
-  .callout-h3 {
-    font-size: 2rem;
-    padding: 0.3rem 2rem 1rem 2rem;
+  .dropdown a {
+    font-size: 2.3rem;
   }
 
-  #about p {
-    padding: 0.1rem 2rem 1rem 2rem;
-    text-shadow: 2px 3px 2px black;
+  .nomadica a {
+    padding-left: 3.5rem;
   }
 
-  .landing-image {
-    position: relative;
-    right: 132%;
-    overflow: hidden;
+  .purchase a {
+    text-align: right;
+    padding-right: 3.5rem;
   }
 
-  #reviews {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    color: white;
+  .market-img {
+    width: 40px;
   }
 
-  #reviews .review {
-    padding-bottom: 1rem;
-  }
-
-  #reviews .review h3 {
-    padding-bottom: 0.5rem;
-    font-size: 1.5rem;
-  }
-
-  #reviews .review p {
-    padding-bottom: 0.5rem;
-    font-size: 1rem;
+  .dropdown-scrolled {
+    top: unset;
+    bottom: 53.45%;
   }
 }
 
-@media (max-width: 375px) {
-  .dropdown-menu,
-  .purchase-menu {
-    bottom: 56px;
-    padding-right: 2.2rem;
-    border-radius: 0;
+@media (max-width: 450px) {
+  .mobile-nav button {
+    font-size: 2rem;
   }
 
   .mobile-nav > button {
-    font-size: 1.5rem;
     margin-right: 1rem;
   }
 
   .mobile-nav > button:first-child {
-    font-size: 1.5rem;
     margin-left: 1rem;
   }
 
-  .dropdown-menu a {
-    font-size: 1rem;
-  }
-  .purchase-menu a {
-    font-size: 1rem;
+  .dropdown {
+    height: 310px;
+    top: 58.7%;
   }
 
-  .dropdown-menu.dropdown-scrolled {
-    top: 56px;
+  .dropdown a {
+    font-size: 1.6rem;
   }
 
-  .purchase-menu.dropdown-scrolled {
-    top: 56px;
+  .nomadica a {
+    padding-left: 0.5rem;
+  }
+
+  .purchase a {
+    text-align: right;
+    padding-right: 0.5rem;
+  }
+
+  .market-img {
+    width: 30px;
+  }
+
+  .dropdown-scrolled {
+    top: unset;
+    bottom: 58.75%;
   }
 }
