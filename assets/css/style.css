@@ -25,16 +25,6 @@ was kept at the correct amounts. */
 
 /* NAVBAR for desktop*/
 
-.navbar {
-  padding: 0;
-  width: 100%;
-  position: fixed;
-  bottom: 0; /* Stick to the bottom initially */
-  background: rgba(0, 0, 0, 0.8);
-  transition: all 0.3s ease; /* Smooth transition */
-  z-index: 1000; /* Ensure it appears above other elements */
-}
-
 .desktop-nav {
   position: fixed; /* position absolutely so it won't follow*/
   top: 0;
@@ -47,6 +37,7 @@ was kept at the correct amounts. */
   display: flex;
   justify-content: center; /* center nav links */
   width: 100%;
+  z-index: 1000;
 }
 
 .mobile-nav {
@@ -54,6 +45,7 @@ was kept at the correct amounts. */
   position: fixed;
   bottom: 0;
   left: 0;
+  height: 8%;
   width: 100%;
   background: rgba(0, 0, 0, 0.9);
   padding: 10px 20px;
@@ -178,6 +170,17 @@ was kept at the correct amounts. */
   display: none;
 }
 
+@media (max-width: 1440px) {
+  .desktop-nav {
+    display: flex;
+  }
+
+  .purchase-dropdown,
+  .menu-dropdown {
+    display: none;
+  }
+}
+
 @media (max-width: 1024px) {
   .desktop-nav {
     display: none;
@@ -189,21 +192,24 @@ was kept at the correct amounts. */
 
   .mobile-nav button {
     font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   .mobile-nav > button {
-    margin-right: 4rem;
+    margin-left: 4rem;
   }
 
   .mobile-nav > button:first-child {
-    margin-left: 4rem;
+    margin-right: 4rem;
   }
 
   .dropdown {
     display: none;
     position: fixed;
     height: 450px;
-    top: 45.1%;
+    bottom: 7.9%;
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.9);
@@ -221,6 +227,7 @@ was kept at the correct amounts. */
     margin: 10px 0;
     font-size: 2.8rem;
     transition: 0.3s;
+    text-align: justify;
   }
 
   .dropdown a:hover {
@@ -228,12 +235,12 @@ was kept at the correct amounts. */
   }
 
   .nomadica a {
-    padding-left: 4rem;
+    padding-left: 8%;
   }
 
   .purchase a {
     text-align: right;
-    padding-right: 4rem;
+    padding-right: 8%;
   }
 
   .market-img {
@@ -249,7 +256,7 @@ was kept at the correct amounts. */
 
   .dropdown-scrolled {
     top: unset;
-    bottom: 45.1%;
+    top: 7.9%;
   }
 
   .nav-links .hero-image {
@@ -274,7 +281,7 @@ was kept at the correct amounts. */
   }
   .dropdown {
     height: 400px;
-    top: 53.4%;
+    bottom: 7.9%;
   }
 
   .dropdown a {
@@ -282,12 +289,12 @@ was kept at the correct amounts. */
   }
 
   .nomadica a {
-    padding-left: 3.5rem;
+    padding-left: 9%;
   }
 
   .purchase a {
     text-align: right;
-    padding-right: 3.5rem;
+    padding-right: 9%;
   }
 
   .market-img {
@@ -295,27 +302,33 @@ was kept at the correct amounts. */
   }
 
   .dropdown-scrolled {
-    top: unset;
-    bottom: 53.45%;
+    top: 7.9;
   }
 }
 
 @media (max-width: 450px) {
+  .mobile-nav {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .mobile-nav button {
     font-size: 2rem;
   }
 
   .mobile-nav > button {
-    margin-right: 1rem;
+    margin-left: 1rem;
   }
 
   .mobile-nav > button:first-child {
-    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .dropdown {
     height: 310px;
-    top: 58.7%;
+    bottom: 7.9%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .dropdown a {
@@ -323,12 +336,12 @@ was kept at the correct amounts. */
   }
 
   .nomadica a {
-    padding-left: 0.5rem;
+    padding-left: 10%;
   }
 
   .purchase a {
     text-align: right;
-    padding-right: 0.5rem;
+    padding-right: 10%;
   }
 
   .market-img {
@@ -336,7 +349,6 @@ was kept at the correct amounts. */
   }
 
   .dropdown-scrolled {
-    top: unset;
-    bottom: 58.75%;
+    top: 7.9%;
   }
 }
