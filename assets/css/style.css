@@ -94,9 +94,10 @@ was kept at the correct amounts. */
 
 /* HERO IMAGE */
 
-.hero {
+#header {
   position: relative;
   width: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -119,6 +120,10 @@ was kept at the correct amounts. */
   text-shadow: 3px 2px 1px black;
   background-color: transparent;
   opacity: 1 !important;
+}
+
+#about {
+  height: 100vh;
 }
 
 .about-content {
@@ -149,8 +154,13 @@ was kept at the correct amounts. */
   z-index: 99;
 }
 
+.about-inner article p {
+  text-shadow: 1px 2px 1px black;
+}
+
 #about {
   overflow: hidden;
+  height: auto;
 }
 
 #about p {
@@ -168,6 +178,50 @@ was kept at the correct amounts. */
 
 .features {
   display: none;
+}
+
+#video-embed iframe {
+  display: flex;
+  position: relative;
+  width: 1280px;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.25);
+}
+
+#reviews {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  height: 100vh;
+  width: 80%;
+  left: 10%;
+}
+
+#reviews h3 {
+  font-size: 2.6rem;
+  text-align: left;
+}
+
+#reviews p {
+  text-align: right;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#reviews i {
+  color: rgb(221, 155, 33);
+  width: 35px;
+  transform: scale(1.3);
+}
+
+#reviews::before {
+  background-image: url("/assets/images/test.webp");
+  background-size: cover; /* Ensure the image covers the whole element */
+  background-position: center; /* Center the image */
+  filter: blur(8px); /* Apply a blur effect */
+  z-index: 1;
 }
 
 @media (max-width: 1440px) {
@@ -350,5 +404,30 @@ was kept at the correct amounts. */
 
   .dropdown-scrolled {
     top: 7.9%;
+  }
+
+  .about-content {
+    padding-top: 1rem;
+  }
+
+  .callout-h1 {
+    font-size: 2.5rem;
+    padding-right: 1rem;
+  }
+
+  #reviews {
+    left: 5%;
+    width: 90%;
+  }
+
+  #reviews .review h3 {
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  #reviews .review p {
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    text-align: right;
   }
 }
