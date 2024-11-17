@@ -143,14 +143,14 @@ was kept at the correct amounts. */
   font-weight: 700;
   font-size: 3.4rem;
   color: white;
-  padding: 1.7rem 0rem 1.5rem 3rem;
+  margin: 2rem 3rem;
   z-index: 99;
 }
 
 .callout-h3 {
   font-weight: 200;
   color: white;
-  padding: 0rem 0rem 1.5rem 3rem;
+  margin: 2rem 3rem;
   z-index: 99;
 }
 
