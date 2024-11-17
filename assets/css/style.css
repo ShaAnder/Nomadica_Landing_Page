@@ -16,6 +16,13 @@ body {
   min-height: 100vh;
 }
 
+/* Force override of bootstrap row style to ensure page width
+was kept at the correct amounts. */
+.row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 /* NAVBAR for desktop*/
 
 .navbar {
@@ -63,6 +70,7 @@ body {
 }
 
 .mobile-nav {
+  display: none;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -234,6 +242,61 @@ body {
     display: flex;
   }
 
+  .mobile-nav > button {
+    margin-right: 3.5rem;
+  }
+
+  .mobile-nav > button:first-child {
+    margin-left: 3.5rem;
+  }
+
+  .dropdown-menu,
+  .purchase-menu {
+    top: 60.8%;
+    padding-right: 5rem;
+    border-radius: 0;
+  }
+
+  .dropdown-menu {
+    text-align: left;
+    padding-left: 5rem;
+  }
+
+  .dropdown-menu a {
+    font-size: 2.5rem;
+  }
+
+  .purchase-menu a {
+    font-size: 2.5rem;
+  }
+
+  /* Scroll Behavior */
+  .navbar.scrolled {
+    bottom: unset; /* Unset bottom positioning */
+    top: 0; /* Stick to the top */
+    background: rgba(0, 0, 0, 0.7); /* Optional: slightly darker */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: shadow for emphasis */
+  }
+
+  .dropdown-menu.dropdown-scrolled {
+    top: unset;
+    bottom: 65.5%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .purchase-menu.dropdown-scrolled {
+    top: unset;
+    bottom: 65.5%;
+  }
+
+  .mobile-nav button {
+    font-size: 3rem;
+  }
+
+  .nav-links .hero-image {
+    width: 100%;
+  }
+
   .hero {
     height: 100vh;
   }
@@ -276,13 +339,6 @@ body {
   .purchase-menu.dropdown-scrolled {
     top: unset;
     bottom: 65.5%;
-  }
-
-  .desktop-nav {
-    display: none;
-  }
-  .mobile-nav {
-    display: flex;
   }
 }
 
