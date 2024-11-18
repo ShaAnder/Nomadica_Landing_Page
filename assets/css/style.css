@@ -171,7 +171,7 @@ was kept at the correct amounts. */
 }
 
 .landing-image {
-  height: 800px;
+  height: 1000px;
   object-fit: cover;
   overflow: hidden;
 }
@@ -429,5 +429,15 @@ was kept at the correct amounts. */
     padding-bottom: 0.5rem;
     font-size: 1rem;
     text-align: right;
+  }
+}
+
+@media (max-width: 375px) {
+  #about {
+    height: 980px;
+  }
+
+  .about-image {
+    transform: scale(1.5);
   }
 }
