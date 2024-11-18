@@ -1,7 +1,9 @@
 ### NOMADICA
 
-This is a landing page for a fictional game called nomadica, it's created using a combination of traditional CSS and bootstrap4 as part of the full stack web development course.
+This is a landing page for a fictional sci fi horror game called "nomadica" created in place of the standard follow along project for the bootstrap module of my full stack web development diploma.
 
-While not a portfolio project per se, as this project was made as an alternative to just following along with an example project. I decided to showcase it was it's own thing because it comprises of a lot of work and skills i actively developed just to finish it.
+The objective of this module was to follow along with the project and build a page with bootstrap. However boostrap while a powerful tool is very restrictive in that it's hard to edit / override css in a fully bootstrap page and as a result of largely being a framework bootstrap websites often look samey.
 
-One notable part I am happy wiht is the dynamically changing nav bar, that not only changes responsively but will shift around the page as the user scrolls through allowing for a clean and concise layout all the way.
+SO with this project I set out to learn how to use bootstrap in a hybrid manner alongside CSS. Utilizing essential booststrap classes and the grid system while keeping full control for more traditional aspects of the website such as the nav bar. Which is not only responsive but dynamic on mobile. This could not have been achieved with mainly bootstrap / bootstrap only.
+
+As a result of utilizing bothe languages this website really does stand out a lot more than if it had been made with just one or the other and it highlights the value of both. Bootstrap really speeds up the development process but it's never a good idea to solely rely on it.
