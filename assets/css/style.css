@@ -436,8 +436,16 @@ was kept at the correct amounts. */
   #about {
     height: 980px;
   }
+}
 
-  .about-image {
-    transform: scale(1.5);
+@media (max-width: 375px) {
+  #about {
+    height: 1200px;
+  }
+
+  .landing-image {
+    height: 1200px;
+    object-fit: cover;
+    overflow: hidden;
   }
 }
