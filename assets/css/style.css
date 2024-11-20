@@ -123,11 +123,11 @@ was kept at the correct amounts. */
 }
 
 #about {
-  height: 100vh;
+  background: url("../images/about.png") center left/cover no-repeat;
 }
 
 .about-content {
-  position: absolute;
+  position: relative;
   padding: 4rem 0;
   box-sizing: border-box;
   width: 100%;
@@ -163,10 +163,6 @@ was kept at the correct amounts. */
   z-index: 99;
 }
 
-#about {
-  background: url("../images/about.png") center left/cover no-repeat;
-}
-
 .features {
   display: none;
 }
@@ -183,12 +179,12 @@ was kept at the correct amounts. */
 
 #reviews {
   position: relative;
-  overflow: hidden;
   color: white;
-  height: 60vh;
+  height: 100%;
   width: 90%;
   left: 5%;
-  margin-top: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 #reviews h3 {
@@ -344,14 +340,6 @@ footer button {
 }
 
 @media (max-width: 1440px) {
-  #about {
-    height: 100vh;
-  }
-
-  #reviews {
-    height: 100vh;
-  }
-
   .desktop-nav {
     display: flex;
   }
@@ -375,14 +363,6 @@ footer button {
 }
 
 @media (max-width: 1024px) {
-  #about {
-    height: 110vh;
-  }
-
-  #reviews {
-    height: 55vh;
-  }
-
   .desktop-nav {
     display: none;
   }
@@ -480,7 +460,7 @@ footer button {
   }
 
   .about-inner article p {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .landing-image {
@@ -489,14 +469,6 @@ footer button {
 }
 
 @media (max-width: 768px) {
-  #about {
-    height: 100vh;
-  }
-
-  #reviews {
-    height: 70vh;
-  }
-
   .mobile-nav button {
     font-size: 2.5rem;
   }
@@ -628,11 +600,11 @@ footer button {
   }
 
   .about-inner article h3 {
-    font-size: 2.1rem;
+    font-size: 2.3rem;
   }
 
   .about-inner article p {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
   }
 
   .landing-image {
@@ -642,7 +614,6 @@ footer button {
   #reviews {
     left: 10%;
     width: 80%;
-    height: 75vh;
   }
 
   #reviews .review h3 {
@@ -666,14 +637,6 @@ footer button {
 }
 
 @media (max-width: 375px) {
-  #about {
-    height: 120vh;
-  }
-
-  #reviews {
-    height: 85vh;
-  }
-
   .landing-image {
     height: 1200px;
     object-fit: cover;
@@ -718,20 +681,16 @@ footer button {
     width: 24px;
   }
 
+  .about-inner article p {
+    font-size: 1.5rem;
+  }
+
   footer button {
     font-size: 1.5rem !important;
   }
 }
 
 @media (max-width: 320px) {
-  #about {
-    height: 150vh;
-  }
-
-  #reviews {
-    height: 100vh;
-  }
-
   .landing-image {
     transform: scale(1.4);
   }
@@ -740,5 +699,9 @@ footer button {
     height: 200px;
     bottom: 7.9%;
     padding-top: 0;
+  }
+
+  .about-inner article p {
+    font-size: 1.3rem;
   }
 }
