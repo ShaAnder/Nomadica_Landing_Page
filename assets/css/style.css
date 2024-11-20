@@ -306,16 +306,12 @@ footer button {
 }
 
 @media (max-width: 1440px) {
-  #header {
-    height: 80vh;
-  }
-
   #about {
-    height: 90vh;
+    height: 100vh;
   }
 
   #reviews {
-    height: 50vh;
+    height: 100vh;
   }
 
   .desktop-nav {
