@@ -305,6 +305,44 @@ footer button {
   margin: 0 5px;
 }
 
+.modal-dialog {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: 40%;
+}
+
+.modal-content {
+  background-color: #0c0c0c;
+  opacity: 0.95;
+  padding: 2rem;
+}
+
+.modal-header {
+  display: none;
+}
+
+.modal-body form label {
+  font-size: 1.5rem;
+}
+
+.modal-body form button {
+  margin: 0;
+  background-color: rgb(230, 138, 0) !important;
+  border: none !important;
+  font-size: 2rem !important;
+}
+
+.modal-body form .form-control {
+  font-size: 2rem;
+  height: calc(2.25rem + 10px) !important;
+  padding: 0.5rem;
+}
+
+.modal-body form .form-text {
+  font-size: 1rem;
+}
+
 @media (max-width: 1440px) {
   #about {
     height: 100vh;

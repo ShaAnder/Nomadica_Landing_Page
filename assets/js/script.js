@@ -4,6 +4,8 @@ const menuDropdown = document.getElementById("menu-dropdown");
 const purchaseDropdown = document.getElementById("purchase-dropdown");
 const navbar = document.querySelector(".mobile-nav");
 
+// modal-controls
+
 document.addEventListener("DOMContentLoaded", () => {
   // NAVBAR CLOSING
 

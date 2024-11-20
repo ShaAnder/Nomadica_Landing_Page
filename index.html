@@ -167,77 +167,82 @@
     </div>
 
     <footer style="background-color: #0a0a0a; color: #fff; padding: 20px; text-align: center;">
-        <section class="social-media ">
-            <h2 class="text-uppercase">More Nomadica In These Spaces</h2>
-            <div class="media-links">
-              <a href="https://www.facebook.com/Nomadica" target="_blank">
-                <i class="fab fa-facebook-square"></i>
-                <p>Facebook</p>
-              </a>
-              <a href="https://www.twitter.com/NomadicaGame" target="_blank">
-                <i class="fab fa-twitter-square"></i>
-                <p>Twitter</p>
-              </a>
-              <a href="https://www.instagram.com/Nomadica" target="_blank">
-                <i class="fab fa-instagram"></i>
-                <p>Instagram</p>
-              </a>
-              <a href="https://www.youtube.com/c/Nomadica" target="_blank">
-                <i class="fab fa-youtube"></i>
-                <p>Youtube</p>
-              </a>
+      <section class="social-media ">
+          <h2 class="text-uppercase">More Nomadica In These Spaces</h2>
+          <div class="media-links">
+            <a href="https://www.facebook.com/Nomadica" target="_blank">
+              <i class="fab fa-facebook-square"></i>
+              <p>Facebook</p>
+            </a>
+            <a href="https://www.twitter.com/NomadicaGame" target="_blank">
+              <i class="fab fa-twitter-square"></i>
+              <p>Twitter</p>
+            </a>
+            <a href="https://www.instagram.com/Nomadica" target="_blank">
+              <i class="fab fa-instagram"></i>
+              <p>Instagram</p>
+            </a>
+            <a href="https://www.youtube.com/c/Nomadica" target="_blank">
+              <i class="fab fa-youtube"></i>
+              <p>Youtube</p>
+            </a>
+          </div>
+      </section>
+      <br>
+      <button class ="btn btn-success btn-xl" data-toggle="modal" data-target="#signUpModal">Newsletter Signup</button>
+      <section class="company-details">
+          <div class="logo">
+              <div class="icon">
+                  <img src="./assets/images/mediaLogos/logo.png" alt="space gamers logo" style="width:100px">
+              </div>
+              <p class="brand-name">SPACE GAMERS</p>
+          </div>
+          <div class="footer-links text-uppercase">
+            <p>
+              <span>SHA ANDER DEVELOPMENT © 2024</span>
+              <span class="text-break">|</span>
+              <a href="#">Presskit</a>
+              <span class="text-break">|</span>
+              <a href="#">Contact</a>
+              <span class="text-break">|</span>
+              <a href="#">Privacy Policy</a>
+              <span class="text-break">|</span>
+              <a href="#">Jobs</a>
+            </p>
+          </div>
+      </section>
+      <!-- Modal for signup goes here, as it's not really part of the main body and will only show up when we hit signup-->
+      <div class="modal" tabindex="-1" role="dialog" id="signUpModal">
+        <div class="modal-dialog" role="document">
+    
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Signup To Our Newsletter</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-        </section>
-        <br>
-        <button class ="btn btn-success btn-xl">Newsletter Signup</button>
-        <section class="company-details">
-            <div class="logo">
-                <div class="icon">
-                    <img src="./assets/images/mediaLogos/logo.png" alt="space gamers logo" style="width:100px">
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="email">Signup Via Email:</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="email field" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
-                <p class="brand-name">SPACE GAMERS</p>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
             </div>
-            <div class="footer-links text-uppercase">
-              <p>
-                <span>SHA ANDER DEVELOPMENT © 2024</span>
-                <span class="text-break">|</span>
-                <a href="#">Presskit</a>
-                <span class="text-break">|</span>
-                <a href="#">Contact</a>
-                <span class="text-break">|</span>
-                <a href="#">Privacy Policy</a>
-                <span class="text-break">|</span>
-                <a href="#">Jobs</a>
-              </p>
-            </div>
-        </section>
-    </footer>
-
-    <!-- Modal for signup goes here, as it's not really part of the main body and will only show up when we hit signup-->
-    <div class="modal" tabindex="-1" role="dialog" id="signUpModal">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Modal body text goes here.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
     <script src="./assets/js/script.js"></script>
     <script
     async
     src="https://kit.fontawesome.com/c58c064348.js"
     crossorigin="anonymous"
   ></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
   </body>
 </html>
