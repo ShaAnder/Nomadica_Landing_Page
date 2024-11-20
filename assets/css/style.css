@@ -312,7 +312,7 @@ footer button {
   display: flex;
   position: relative;
   justify-content: center;
-  top: 40%;
+  top: 20%;
 }
 
 .modal-content {
