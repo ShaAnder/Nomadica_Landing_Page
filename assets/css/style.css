@@ -725,11 +725,11 @@ footer button {
 
 @media (max-width: 320px) {
   #about {
-    height: 115vh;
+    height: 150vh;
   }
 
   #reviews {
-    height: 90vh;
+    height: 100vh;
   }
 
   .landing-image {
