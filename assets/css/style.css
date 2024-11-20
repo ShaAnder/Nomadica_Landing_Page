@@ -667,7 +667,7 @@ footer button {
 
 @media (max-width: 375px) {
   #about {
-    height: 105vh;
+    height: 120vh;
   }
 
   #reviews {
