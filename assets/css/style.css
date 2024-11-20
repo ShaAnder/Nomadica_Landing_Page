@@ -123,6 +123,8 @@ was kept at the correct amounts. */
 }
 
 #about {
+  width: fit-content;
+  height: fit-content;
   background: url("../images/about.png") center left/cover no-repeat;
 }
 
@@ -604,7 +606,7 @@ footer button {
   }
 
   .about-inner article p {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
 
   .landing-image {
@@ -681,8 +683,16 @@ footer button {
     width: 24px;
   }
 
-  .about-inner article p {
+  .about-inner article h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-inner article h3 {
     font-size: 1.5rem;
+  }
+
+  .about-inner article p {
+    font-size: 1.1rem;
   }
 
   footer button {
@@ -701,7 +711,15 @@ footer button {
     padding-top: 0;
   }
 
-  .about-inner article p {
+  .about-inner article h1 {
+    font-size: 2rem;
+  }
+
+  .about-inner article h3 {
     font-size: 1.3rem;
+  }
+
+  .about-inner article p {
+    font-size: 1.1rem;
   }
 }
