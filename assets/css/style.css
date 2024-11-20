@@ -123,9 +123,14 @@ was kept at the correct amounts. */
 }
 
 #about {
+  margin-bottom: 4rem;
+  background: url("../images/about.png") center left/cover no-repeat;
+}
+
+.about-container {
+  display: inline-block;
   width: fit-content;
   height: fit-content;
-  background: url("../images/about.png") center left/cover no-repeat;
 }
 
 .about-content {
